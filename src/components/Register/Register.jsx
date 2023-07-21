@@ -3,7 +3,6 @@ import { useDispatch } from 'react-redux';
 import { addUser } from 'redux/user/operations';
 import css from './Register.module.css';
 
-
 export function Register() {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
@@ -40,22 +39,40 @@ export function Register() {
   };
 
   return (
-       <div className={css.loginbox}>
+    <div className={css.loginbox}>
       <h2>Register</h2>
       <form onSubmit={formSubmitHandler}>
         <div className={css.userbox}>
-          <input type="text" name="name" required="" onChange={handleChange} value={name}/>
+          <input
+            type="text"
+            name="name"
+            required=""
+            onChange={handleChange}
+            value={name}
+          />
           <label>Username</label>
         </div>
         <div className={css.userbox}>
-          <input type="email" name="email" required="" onChange={handleChange} value={email}/>
+          <input
+            type="email"
+            name="email"
+            required=""
+            onChange={handleChange}
+            value={email}
+          />
           <label>Email</label>
         </div>
         <div className={css.userbox}>
-          <input type="password" name="password" required="" onChange={handleChange} value={password}/>
+          <input
+            type="password"
+            name="password"
+            required=""
+            onChange={handleChange}
+            value={password}
+          />
           <label>Password</label>
         </div>
-        <button type='submit'>
+        <button type="submit">
           <span></span>
           <span></span>
           <span></span>

@@ -25,7 +25,7 @@ export function ContactForm() {
 
   const formSubmitHandler = e => {
     e.preventDefault();
-    const newData = { name, number};
+    const newData = { name, number };
     if (contacts.length > 0) {
       const nameFilter = contacts.filter(contact =>
         contact.name.includes(name)

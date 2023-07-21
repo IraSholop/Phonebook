@@ -3,7 +3,7 @@ import contactsSlice from './contacts/slice';
 import filterSlise from './filter/slice';
 import userSlice from './user/slice';
 import {
-  persistStore, 
+  persistStore,
   persistReducer,
   FLUSH,
   REHYDRATE,
@@ -32,10 +32,9 @@ export const store = configureStore({
     return getDefaultMiddleware({
       serializableCheck: {
         ignoredActions: [FLUSH, REHYDRATE, PAUSE, PERSIST, PURGE, REGISTER],
-    }
-  })
-}
+      },
+    });
+  },
 });
 
 export const persistor = persistStore(store);
-
